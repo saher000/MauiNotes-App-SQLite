@@ -13,7 +13,6 @@ A simple .NET MAUI notes app using local SQLite storage.
 - `ViewModels/MainPageViewModel.cs` – screen state + commands.
 - `Views/MainPage.xaml` – notes UI.
 
-## Build prerequisites
 
 2. Install MAUI workloads:
    ```bash

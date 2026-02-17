@@ -3,6 +3,7 @@ using MauiNotesApp.ViewModels;
 using MauiNotesApp.Views;
 
 
+
 namespace MauiNotesApp;
 
 public static class MauiProgram
@@ -12,6 +13,7 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
 
+          
 
         builder.Services.AddSingleton<NotesDatabase>();
         builder.Services.AddSingleton<MainPageViewModel>();

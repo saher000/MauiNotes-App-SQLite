@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
+  
 
     <OutputType>Exe</OutputType>
     <RootNamespace>MauiNotesApp</RootNamespace>
@@ -8,10 +8,8 @@
     <SingleProject>true</SingleProject>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <ApplicationTitle>Maui Notes</ApplicationTitle>
-    <ApplicationId>com.example.mauinotesapp</ApplicationId>
-    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-    <ApplicationVersion>1</ApplicationVersion>
+
+  
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,10 +20,12 @@
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
 
+    
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
   </ItemGroup>
+
 
 </Project>
