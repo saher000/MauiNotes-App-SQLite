@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiNotesApp.Views.MainPage"
+             Title="Maui Notes">
+    <ScrollView>
+        <VerticalStackLayout Spacing="12" Padding="16">
+            <Label Text="My Notes" FontSize="28" FontAttributes="Bold" />
+
+            <Entry Placeholder="Title" Text="{Binding TitleText}" />
+            <Editor Placeholder="Write your note..."
+                    AutoSize="TextChanges"
+                    HeightRequest="120"
+                    Text="{Binding ContentText}" />
+
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="New" Command="{Binding NewCommand}" />
+                <Button Text="Save" Command="{Binding SaveCommand}" />
+                <Button Text="Delete" Command="{Binding DeleteCommand}" />
+            </HorizontalStackLayout>
+
+            <Label Text="Saved Notes" FontSize="18" FontAttributes="Bold" Margin="0,12,0,0" />
+
+            <CollectionView ItemsSource="{Binding Notes}"
+                            SelectionMode="Single"
+                            SelectedItem="{Binding SelectedNote}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border StrokeThickness="1" Padding="10" Margin="0,4">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Title}" FontAttributes="Bold" />
+                                <Label Text="{Binding Content}" LineBreakMode="TailTruncation" MaxLines="2" />
+                                <Label Text="{Binding LastUpdatedUtc, StringFormat='Updated: {0:g} UTC'}"
+                                       FontSize="12"
+                                       Opacity="0.7" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
