@@ -14,7 +14,7 @@ A simple .NET MAUI notes app using local SQLite storage.
 - `Views/MainPage.xaml` – notes UI.
 
 ## Build prerequisites
-1. Install the .NET SDK (8+).
+
 2. Install MAUI workloads:
    ```bash
    dotnet workload install maui

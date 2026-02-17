@@ -1,7 +1,7 @@
 using MauiNotesApp.Services;
 using MauiNotesApp.ViewModels;
 using MauiNotesApp.Views;
-using Microsoft.Extensions.Logging;
+
 
 namespace MauiNotesApp;
 
@@ -11,8 +11,7 @@ public static class MauiProgram
     {
         var builder = MauiApp.CreateBuilder();
         builder
-            .UseMauiApp<App>()
-;
+
 
         builder.Services.AddSingleton<NotesDatabase>();
         builder.Services.AddSingleton<MainPageViewModel>();

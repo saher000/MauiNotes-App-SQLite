@@ -1,5 +1,7 @@
 using MauiNotesApp.Views;
 
+
+
 namespace MauiNotesApp;
 
 public partial class App : Application

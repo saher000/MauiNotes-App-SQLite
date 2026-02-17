@@ -1,5 +1,6 @@
 using MauiNotesApp.ViewModels;
 
+
 namespace MauiNotesApp.Views;
 
 public partial class MainPage : ContentPage
